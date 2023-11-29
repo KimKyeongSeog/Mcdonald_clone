@@ -1,28 +1,85 @@
 import Card from "./components/Card";
 
+import MenuDropDown from "./components/MenuDropDown";
+
 const App = () => {
+  const CardList = [
+    {
+      index: "1",
+      image: "./image/mc-card-01.jpg",
+      describe: "매콤빠삭하게 레벨 업!"
+    },
+    {
+      index: "2",
+      image: "./image/mc-card-02.jpg",
+      describe: "칠리 치즈 후라이&토마토 치킨 스낵랩"
+    },
+
+    {
+      index: "3",
+      image: "./image/mc-card-03.jpg",
+      describe: "갓성비 간식 맛집, 맥도날드 해피 스낵!"
+    },
+    {
+      index: "4",
+      image: "./image/mc-card-04.jpg",
+      describe: "맥도날드 M오더"
+    },
+    {
+      index: "5",
+      image: "./image/mc-card-05.jpg",
+      describe: "빠삭하게 빠져드는 맛, 맥크리스피!"
+    },
+    {
+      index: "6",
+      image: "./image/mc-card-06.jpg",
+      describe: "갓 구워내 따뜻하고 신선한 베이컨 토마토 에그 머핀!"
+    },
+    {
+      index: "7",
+      image: "./image/mc-card-07.jpg",
+      describe: "상콤달콤! NEW 자두 천도복숭아 칠러 출시!"
+    },
+    {
+      index: "8",
+      image: "./image/mc-card-08.jpg",
+      describe: "맥도날드와 함께 성장할 크루와 매니저를 찾습니다"
+    },
+    {
+      index: "9",
+      image: "./image/mc-card-09.jpg",
+      describe: "첫 적립시 2000 포인트 제공! 새로워진 마이 맥도날드 리워드!"
+    },
+    {
+      index: "10",
+      image: "./image/mc-card-10.jpg",
+      describe: "우리가 엄격해질수록 버거는 더 맛있어지니까!"
+    },
+    {
+      index: "11",
+      image: "./image/mc-card-11.jpg",
+      describe: "0.1초에 한잔! 매일 마시는 커피를 더 맛있게"
+    },
+    {
+      index: "12",
+      image: "./image/mc-card-12.jpg",
+      describe:
+        "전문 코치들의 체계적이고 전문적인 교육을 통해 지역사회 행복에 기여합니다"
+    },
+    {
+      index: "13",
+      image: "./image/mc-card-13.jpg",
+      describe: "귀하의 토지, 건물에 맥도날드를 유치하세요!"
+    }
+  ];
+  console.log(CardList);
+
   return (
-    <div className="App">
-      <header className="bg-red-100 min-w-screen h-[140px] flex items-center justify-center">
-        <img src="" alt="" className="h-[93px] w-[106px]" />
-        <ul className="bg-blue-100 flex ml-[85px]">
-          <li className="mr-[85px]">1</li>
-          <li className="mr-[85px]">2</li>
-          <li className="mr-[85px]">3</li>
-          <li className="mr-[85px]">4</li>
-        </ul>
-        <div>
-          <button className="w-[80px] h-[36px] bg-yellow-400 rounded-full">
-            1
-          </button>
-          <button className="w-[80px] h-[36px] bg-yellow-400 rounded-full">
-            1
-          </button>
-          <button className="w-[80px] h-[36px] bg-yellow-400 rounded-full">
-            1
-          </button>
-        </div>
-        <img src="" alt="" className="h-9 m-9 ml-[26px]" />
+    <div className=" dropd font-['Nanum700']">
+      <header>
+        <section>
+          <MenuDropDown />
+        </section>
       </header>
       <div className="bg-green-300 min-w-screen h-[540px] pb-[30px]">
         slider
@@ -30,22 +87,14 @@ const App = () => {
       <div className="mb-[60px]">Mcdonald's LIVE</div>
       <main className="flex items-center justify-center">
         <div className="w-[1203px] grid grid-cols-3">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {CardList.map((v, i) => {
+            return (
+              <Card index={v.index} image={v.image} describe={v.describe} />
+            );
+          })}
         </div>
       </main>
-      <footer className="bg-black min-w-full h-[260px] flex items-center justify-center">
+      <footer className="font-['Nanum'] bg-black min-w-full h-[260px] flex items-center justify-center">
         <div className="bg-gray-300 w-[1168px] h-[260px] flex justify-between pt-[45px] pb-[55px]">
           <div className="flex">
             <ul className="bg-yellow-400 w-[190px] pt-2">
