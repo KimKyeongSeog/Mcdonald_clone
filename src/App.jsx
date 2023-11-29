@@ -1,3 +1,4 @@
+import BannerSilder from "./components/BannerSilder";
 import Card from "./components/Card";
 
 import MenuDropDown from "./components/MenuDropDown";
@@ -72,19 +73,18 @@ const App = () => {
       describe: "귀하의 토지, 건물에 맥도날드를 유치하세요!"
     }
   ];
+
   console.log(CardList);
 
   return (
     <div className=" dropd font-['Nanum700']">
       <header>
-        <section>
-          <MenuDropDown />
-        </section>
+        <MenuDropDown />
       </header>
-      <div className="bg-green-300 min-w-screen h-[540px] pb-[30px]">
-        slider
+      <div>
+        <BannerSilder className="mb-15" />
       </div>
-      <div className="mb-[60px]">Mcdonald's LIVE</div>
+      <div className="">Mcdonald's LIVE</div>
       <main className="flex items-center justify-center">
         <div className="w-[1203px] grid grid-cols-3">
           {CardList.map((v, i) => {
