@@ -21,7 +21,7 @@ const MenuDropDown = () => {
         <Header />
       </div>
       {hoverHeader && (
-        <div className="absolute top-full bg-white min-w-full justify-center">
+        <div className="absolute z-10 top-full bg-white min-w-full justify-center">
           <div className="flex font-['nanum'] w-[620px] pt-4 pb-12 sm:md:ml-[0%] md:ml-[9.5%] lg:ml-[28.7%]">
             <ul className="w-[150px] flex flex-col pt-1 gap-2 text-[16px] text-gray-500 hover:text-black hover:border-b-0 border-black">
               <li className="pt-2">버거</li>

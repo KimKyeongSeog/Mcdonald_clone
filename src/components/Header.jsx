@@ -3,16 +3,16 @@ const Header = () => {
     <section className=" min-w-screen h-[140px] flex items-center justify-center border-gray-200 border-b-[1px]">
       <img src="./image/McLogo.jpg" alt="" className="h-[93px] w-[106px]" />
       <ul className="flex ml-[85px] font-['Gothic']">
-        <li className="mr-[85px] pt-14 h-[140px] text-xl hover:border-b-[3px] border-yellow-500">
+        <li className="mr-[90px] pt-14 h-[140px] text-base hover:border-b-[3px] border-yellow-500">
           Menu
         </li>
-        <li className="mr-[85px] pt-14 h-[140px] text-xl hover:border-b-[3px] border-yellow-500">
+        <li className="mr-[90px] pt-14 h-[140px] text-base hover:border-b-[3px] border-yellow-500">
           Store
         </li>
-        <li className="mr-[85px] pt-14 h-[140px] text-xl hover:border-b-[3px] border-yellow-500">
+        <li className="mr-[90px] pt-14 h-[140px] text-base hover:border-b-[3px] border-yellow-500">
           What's New
         </li>
-        <li className="mr-[85px] pt-14 h-[140px] text-xl hover:border-b-[3px] border-yellow-500">
+        <li className="mr-[90px] pt-14 h-[140px] text-base hover:border-b-[3px] border-yellow-500">
           Story
         </li>
       </ul>

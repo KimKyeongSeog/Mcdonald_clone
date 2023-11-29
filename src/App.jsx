@@ -78,13 +78,15 @@ const App = () => {
 
   return (
     <div className=" dropd font-['Nanum700']">
-      <header>
+      <header className="">
         <MenuDropDown />
       </header>
-      <div>
-        <BannerSilder className="mb-15" />
+      <div className=" ">
+        <BannerSilder />
       </div>
-      <div className="">Mcdonald's LIVE</div>
+      <div className="mt-2 mb-16 font-['Gothic'] text-3xl lg:ml-[20%]">
+        Mcdonald's LIVE
+      </div>
       <main className="flex items-center justify-center">
         <div className="w-[1203px] grid grid-cols-3">
           {CardList.map((v, i) => {
