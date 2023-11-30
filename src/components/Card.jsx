@@ -6,7 +6,7 @@ const Card = ({ image, describe }) => {
         src={image}
         alt=""
       />
-      <div className="m-8 text-lg w-[306px]">{describe}</div>
+      <div className="m-8 text-lg  whitespace-pre w-[306px]">{describe}</div>
     </div>
   );
 };
