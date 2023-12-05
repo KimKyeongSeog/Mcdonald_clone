@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Header } from "./Header";
+import { useNavigate } from "react-router-dom";
 
 const MenuDropDown = () => {
   const [hoverHeader, setHoverheader] = useState(false);
@@ -11,6 +12,23 @@ const MenuDropDown = () => {
   const mouseLeave = () => {
     setHoverheader(false);
   };
+
+  const movePage = useNavigate();
+
+  function goMacLunch() {
+    movePage("/menu/MacLunch");
+  }
+  function goMacMoning() {
+    movePage("/menu/MacMoning");
+  }
+  function goSnack() {
+    movePage("/menu/Snack");
+  }
+
+  function goMenu() {
+    movePage("/menu/burger");
+  }
+
   return (
     <div className="relative">
       <div className="cursor-pointer" onMouseEnter={mouseHover}>
@@ -18,21 +36,33 @@ const MenuDropDown = () => {
       </div>
       {hoverHeader && (
         <div
-          className="absolute z-10 top-full bg-white min-w-full justify-center"
+          className="absolute z-20 top-full bg-white min-w-full justify-center"
           onMouseLeave={mouseLeave}
         >
-          <div className="flex font-['nanum'] w-[620px] pt-4 pb-12 sm:md:ml-[0%] md:ml-[9.5%] lg:ml-[28.7%]">
-            <ul className="w-[150px] flex flex-col pt-1 gap-2 text-[16px] text-gray-500 ">
-              <li className="pt-2 hover:text-black hover:underline border-black ">
+          <div className="flex font-['nanum'] w-[620px] pt-4 pb-12 sm:ml-[0%] md:ml-[9.5%] lg:ml-[28.7%]">
+            <ul className="w-[150px] flex flex-col pt-1 gap-2 text-[16px] text-gray-500">
+              <li
+                onClick={goMenu}
+                className="pt-2 hover:text-black hover:underline border-black "
+              >
                 버거
               </li>
-              <li className="pt-2 hover:text-black hover:underline border-black ">
+              <li
+                onClick={goMacLunch}
+                className="pt-2 hover:text-black hover:underline border-black "
+              >
                 맥런치
               </li>
-              <li className="pt-2 hover:text-black hover:underline border-black ">
+              <li
+                onClick={goMacMoning}
+                className="pt-2 hover:text-black hover:underline border-black "
+              >
                 맥모닝
               </li>
-              <li className="pt-2 hover:text-black hover:underline border-black ">
+              <li
+                onClick={goSnack}
+                className="pt-2 hover:text-black hover:underline border-black "
+              >
                 해피 스낵
               </li>
               <li className="pt-2 hover:text-black hover:underline border-black ">

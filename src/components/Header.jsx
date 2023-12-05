@@ -1,9 +1,29 @@
+import { useNavigate } from "react-router-dom";
+
 const Header = () => {
+  const movePage = useNavigate();
+
+  function goMenu() {
+    movePage("/menu/burger");
+  }
+
+  function goHome() {
+    movePage("/");
+  }
+
   return (
     <section className=" min-w-screen h-[140px] flex items-center justify-center border-gray-200 border-b-[1px]">
-      <img src="./image/McLogo.jpg" alt="" className="h-[93px] w-[106px]" />
+      <img
+        onClick={goHome}
+        src={`${process.env.PUBLIC_URL}/image/McLogo.jpg`}
+        alt="logo"
+        className="h-[93px] w-[106px]"
+      />
       <ul className="flex ml-[85px] font-['Gothic']">
-        <li className="mr-[90px] pt-14 h-[140px] text-base hover:border-b-[3px] border-yellow-500">
+        <li
+          onClick={goMenu}
+          className="mr-[90px] pt-14 h-[140px] text-base hover:border-b-[3px] border-yellow-500"
+        >
           Menu
         </li>
         <li className="mr-[90px] pt-14 h-[140px] text-base hover:border-b-[3px] border-yellow-500">
@@ -28,7 +48,7 @@ const Header = () => {
         </button>
       </div>
       <img
-        src="./image/mc-magnifier.jpg"
+        src={`${process.env.PUBLIC_URL}/image/mc-magnifier.jpg`}
         alt="magnifier"
         className="h-9 m-9 ml-[26px]"
       />

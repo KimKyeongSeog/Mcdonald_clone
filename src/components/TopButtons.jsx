@@ -27,18 +27,18 @@ const TopButtons = () => {
 
   return (
     showButton && (
-      <div className="w-[121px] h-[262px]  items-center ju">
+      <div className="w-[121px] h-[262px]  items-center">
         <button>
           <img
             className="w-[121px] h-[121px] m-6"
-            src="./image/mc-button-01.jpg"
+            src={`${process.env.PUBLIC_URL}/image/mc-button-01.jpg`}
             alt=""
           />
         </button>
         <button>
           <img
             className="w-[121px] h-[121px] m-6"
-            src="./image/mc-button-02.jpg"
+            src={`${process.env.PUBLIC_URL}/image/mc-button-02.jpg`}
             alt=""
           />
         </button>

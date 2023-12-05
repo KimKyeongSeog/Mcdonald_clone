@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
         <img
           className="w-[100px] h-[70px]"
-          src="./image/mc-wa.jpg"
+          src={`${process.env.PUBLIC_URL}/image/mc-wa.jpg`}
           alt="과학기술정보통신부"
         />
       </div>
