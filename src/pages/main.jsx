@@ -1,8 +1,9 @@
 import BannerSilder from "../components/BannerSilder";
-import Card from "../components/Card";
+
 import MenuDropDown from "../components/MenuDropDown";
 import TopButtons from "../components/TopButtons";
 import Footer from "../components/Footer";
+import MainCard from "../components/MainCard";
 
 const Main = () => {
   const CardList = [
