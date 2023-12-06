@@ -43,7 +43,7 @@ const TopButtons = () => {
           />
         </button>
         <button className="ml-14" onClick={scrollToTop}>
-          <img src="./image/mc-top.jpg" alt="" />
+          <img src={`${process.env.PUBLIC_URL}/image/mc-top.jpg`} alt="" />
         </button>
       </div>
     )

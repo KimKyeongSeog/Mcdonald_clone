@@ -92,7 +92,7 @@ const Main = () => {
         <div className="w-[1203px] grid grid-cols-3">
           {CardList.map((v, i) => {
             return (
-              <Card index={v.index} image={v.image} describe={v.describe} />
+              <MainCard index={v.index} image={v.image} describe={v.describe} />
             );
           })}
         </div>
